@@ -142,7 +142,6 @@ MonoBehaviour:
   XRight: 3
   XLeft: -3
   direction: right
-  baru: {x: -3.22, y: 5.87}
 --- !u!1 &573925074
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,6 +290,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1093799108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1093799110}
+  - component: {fileID: 1093799109}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1093799109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093799108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ebcab9e91467345a743d29e8b6c650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alien: {fileID: 3099078354078413061, guid: f90d70c329ec562428212ed3bc9a414c, type: 3}
+  spawnValue: {x: 0, y: 0}
+  alienCount: 10
+  spawnWait: 0
+  startWait: 0
+  waveWait: 0
+--- !u!4 &1093799110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093799108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.90893364, y: 4.7519526, z: -25.490234}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &484124818766374065
 PrefabInstance:

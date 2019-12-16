@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    public float speed = 3;
-    public float XRight = 3;
-    public float XLeft = -3;
-    public string direction = "right";
+    public float speed;
+    public float XRight;
+    public float XLeft;
+    string[] texts = new string[] { "right", "left" };
+    public string direction;
     private int downcounter = 0;
-    public Vector2 baru;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = baru;
+        direction = texts[Random.Range(0, texts.Length)];
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class EnemyMove : MonoBehaviour
                 transform.position = pos;
                 transform.Translate(Vector2.down * speed * Time.deltaTime);
                 downcounter++;
-                if (downcounter == 5)
+                if (downcounter == 10)
                 {
                     direction = "left";
                     downcounter = 0;
@@ -50,7 +50,7 @@ public class EnemyMove : MonoBehaviour
                 transform.position = pos;
                 transform.Translate(Vector2.down * speed * Time.deltaTime);
                 downcounter++;
-                if (downcounter == 5)
+                if (downcounter == 10)
                 {
                     direction = "right";
                     downcounter = 0;
@@ -67,7 +67,7 @@ public class EnemyMove : MonoBehaviour
         if ((posOnScreen.x <= -1) || (posOnScreen.x >= 1.1))
             Destroy(this.gameObject);
 
-        if ((posOnScreen.y <= -1) || (posOnScreen.y >= 1.1))
+        if ((posOnScreen.y <= -0.1) || (posOnScreen.y >= 1.1))
             Destroy(this.gameObject);
     }
 }
